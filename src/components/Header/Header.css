@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  margin: 0;
+  max-width: 1440px;
+}
+
+.header__logo {
+  margin: 30px 0 26px 104px;
+  font-family: 'RobotoSlab';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .header__logo {
+    margin: 22.73px 0 18.47px 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__mobile {
+    background: #1a1b22;
+    display: grid;
+    grid-template-columns: 160px 160px;
+  }
+  .header__logo {
+    margin: 16px 0 16px 16px;
+  }
+}

@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0;
+  background-color: #f5f6f7;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    max-width: 768px;
+  }
+}

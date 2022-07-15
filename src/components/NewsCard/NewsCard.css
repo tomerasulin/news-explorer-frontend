@@ -1,0 +1,285 @@
+.card {
+  width: 400px;
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.card__signin {
+  margin: 24px 5px 0 149px;
+  width: 182px;
+  height: 40px;
+  background: #ffffff;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #000000;
+  border: none;
+  position: absolute;
+}
+
+.card__signin_hide {
+  display: none;
+}
+
+.card__button {
+  background: url('../../images/markIcon.svg') no-repeat center;
+  width: 40px;
+  height: 40px;
+  margin: 24px 24px 0 0;
+  align-self: flex-end;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+.card__button_mark-black {
+  background: url('../../images/markIconblack.svg') no-repeat center;
+  background-color: #ffffff;
+}
+
+.card__button_mark-fill {
+  background: url('../../images/markIconfillblue.svg') no-repeat center;
+  background-color: #ffffff;
+}
+.card__button_delete {
+  background: url('../../images/trashlogo.svg') no-repeat center;
+  width: 40px;
+  height: 40px;
+  margin: 24px 24px 0 0;
+  align-self: flex-end;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+.card__button_delete-black {
+  background: url('../../images/trashlogoblack.svg') no-repeat center;
+  background-color: #ffffff;
+}
+
+.card__image {
+  width: 400px;
+  height: 272px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card__date {
+  margin: 20px 0 0 24px;
+  font-family: 'SourceSansPro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+}
+
+.card__title {
+  margin: 12px 0 0 24px;
+  font-family: 'RobotoSlab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1a1b22;
+  width: 352px;
+  height: 60px;
+}
+
+.card__text {
+  margin: 16px 0 0 24px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1a1b22;
+  width: 352px;
+}
+
+.card__author {
+  margin: 18px 0 0 24px;
+  font-family: 'RobotoSlab';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #b6bcbf;
+}
+
+.card__keyword {
+  background: #ffffff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  width: 121px;
+  height: 40px;
+  margin: 24px 0 0 24px;
+}
+
+.card__keyword_hide {
+  display: none;
+}
+
+.card__remove {
+  width: 159px;
+  height: 40px;
+  background: #ffffff;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  margin: 24px 69px 0 0;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  align-self: flex-end;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.card__remove_hide {
+  display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 224px;
+    height: 420px;
+  }
+  .card__button {
+    margin: 8px 8px 0 0;
+  }
+  .card__button_delete-black {
+    margin: 8px 8px 0 0;
+  }
+
+  .card__image {
+    width: 224px;
+    height: 150px;
+  }
+
+  .card__date {
+    margin: 16px 0 0 15px;
+  }
+  .card__title {
+    margin: 12px 16px 0;
+    font-size: 22px;
+    line-height: 24px;
+    width: 192px;
+    height: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .card__text {
+    margin: 10px 16px 0;
+    width: 192px;
+    height: 88px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .card__author {
+    margin: 12px 16px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 192px;
+    height: 20px;
+  }
+  .card__signin {
+    margin: 8px 0 0 8px;
+    width: 122px;
+    height: 40px;
+  }
+  .card__keyword {
+    width: 83px;
+    margin: 8px 0 0 8px;
+  }
+  .card__button_delete {
+    margin: 8px 8px 0 0;
+  }
+  .card__remove {
+    width: 83px;
+    margin: 64px 8px 0 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .card {
+    width: 288px;
+    height: 440px;
+    margin-top: 10px;
+  }
+  .card__button {
+    margin: 16px 16px 0 0;
+  }
+  .card__button_delete-black {
+    margin: 8px 8px 0 0;
+  }
+
+  .card__image {
+    width: 288px;
+    height: 196px;
+  }
+
+  .card__date {
+    margin: 16px 16px 0;
+  }
+
+  .card__title {
+    margin: 10px 16px 0;
+    width: 256px;
+    height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .card__text {
+    margin: 14px 16px 0;
+    width: 256px;
+  }
+
+  .card__author {
+    margin: 8px 16px 16px;
+    width: 256px;
+  }
+
+  .card__signin {
+    margin: 16px 0 0 16px;
+    width: 122px;
+    height: 40px;
+  }
+
+  .card__remove {
+    width: 83px;
+    margin: 8px 64px 0 0;
+  }
+}
