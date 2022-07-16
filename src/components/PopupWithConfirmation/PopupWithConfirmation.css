@@ -50,7 +50,7 @@
 }
 
 .popup__text-confirmation {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -73,7 +73,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-family: 'Inter';
+  font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -110,5 +110,19 @@
   }
   .popup__text-confirmation {
     margin-right: 74px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .popup__container-confirmation {
+    max-width: 320px;
+  }
+  .popup__form-confirmation {
+    max-width: 320px;
+  }
+  .popup__close-button {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 16px;
   }
 }

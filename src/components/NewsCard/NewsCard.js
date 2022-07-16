@@ -1,54 +1,41 @@
 import './NewsCard.css';
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 
-const NewsCard = ({ card, savedNews, isLoggedIn }) => {
+const NewsCard = ({ card, isSavedNews, isLoggedIn, buttonText }) => {
   const [isClicked, setIsClicked] = useState(false);
-  const location = useLocation();
-
   return (
     <li className='card'>
       <button
         className={
-          savedNews && location.pathname === '/saved-news'
-            ? 'card__keyword'
-            : 'card__keyword_hide'
+          isSavedNews
+            ? 'card__button card__button_keyword'
+            : 'card__button_keyword_hide'
         }
       >
         {card.keyword}
       </button>
       <button
         className={
-          isClicked && !savedNews && !isLoggedIn
-            ? 'card__signin'
-            : 'card__signin_hide'
-        }
-      >
-        Sign in to save articles
-      </button>
-      <button
-        className={
-          savedNews && location.pathname === '/saved-news'
-            ? 'card__button_delete ' && isClicked
-              ? 'card__button_delete card__button_delete-black'
-              : 'card__button_delete'
-            : isClicked && isLoggedIn
-            ? 'card__button card__button_mark-fill'
-            : 'card__button' && isClicked
-            ? 'card__button card__button_mark-black'
-            : 'card__button'
+          isSavedNews
+            ? 'card__button card__button_delete '
+            : isLoggedIn && isClicked
+            ? 'card__button card__button_mark card__button_mark-fill'
+            : 'card__button card__button_mark'
         }
         onClick={() => setIsClicked(!isClicked)}
-      ></button>
+      />
       <button
         className={
-          isClicked && savedNews && !isLoggedIn
-            ? 'card__remove'
-            : 'card__remove_hide'
+          isSavedNews
+            ? 'card__button_text'
+            : isLoggedIn
+            ? 'card__button_text_hide'
+            : 'card__button_text'
         }
       >
-        Remove from saved
+        {buttonText}
       </button>
+
       <img className='card__image' src={card.image} alt='' />
       <p className='card__date'>{card.date}</p>
       <h3 className='card__title'>{card.title}</h3>

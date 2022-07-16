@@ -1,12 +1,11 @@
 .App {
   max-width: 1440px;
-  font-family: 'Inter', 'Roboto', 'RobotoSlab', 'SourceSansPro', Arial,
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+  margin: 0 auto;
 }
 
 .App__image {

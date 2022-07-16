@@ -13,13 +13,13 @@ import PopupWithConfirmation from '../PopupWithConfirmation/PopupWithConfirmatio
 function App() {
   const [isSigninPopupOpen, setisSigninPopupOpen] = useState(false);
   const [isConfirmationPopupOpen, setIsConfirmationPopupOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 680);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     function handleWindowSize() {
-      setIsMobile(window.innerWidth <= 425);
+      setIsMobile(window.innerWidth <= 680);
     }
     window.addEventListener('resize', handleWindowSize);
 
@@ -50,7 +50,7 @@ function App() {
                 onHandleMenu={() => setIsOpen(!isOpen)}
               />
               <SearchForm />
-              <Main />
+              <Main isLoggedIn={isLoggedIn} />
             </div>
           }
         />
@@ -65,7 +65,7 @@ function App() {
                 username='Tomer'
                 isLoggedIn={isLoggedIn}
               />
-              <SavedNews />
+              <SavedNews isLoggedIn={isLoggedIn} />
             </>
           }
         />

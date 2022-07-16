@@ -7,14 +7,36 @@
   border-radius: 10px;
 }
 
-.card__signin {
+.card__button {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+  border-radius: 8px;
+  margin: 24px 24px 0 0;
+}
+
+.card__button_mark {
+  background: url('../../images/markIcon.svg') no-repeat center;
+  background-color: #ffffff;
+}
+
+.card__button_mark:hover {
+  background: url('../../images/markIconblack.svg') no-repeat center;
+  background-color: #ffffff;
+}
+
+.card__button_mark:hover + .card__button_text {
   margin: 24px 5px 0 149px;
   width: 182px;
   height: 40px;
   background: #ffffff;
   box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
   border-radius: 10px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -23,48 +45,21 @@
   color: #000000;
   border: none;
   position: absolute;
-}
-
-.card__signin_hide {
-  display: none;
-}
-
-.card__button {
-  background: url('../../images/markIcon.svg') no-repeat center;
-  width: 40px;
-  height: 40px;
-  margin: 24px 24px 0 0;
-  align-self: flex-end;
-  border-radius: 8px;
-  background-color: #ffffff;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-}
-
-.card__button_mark-black {
-  background: url('../../images/markIconblack.svg') no-repeat center;
-  background-color: #ffffff;
+  display: block;
+  align-self: flex-start;
 }
 
 .card__button_mark-fill {
   background: url('../../images/markIconfillblue.svg') no-repeat center;
   background-color: #ffffff;
 }
+
 .card__button_delete {
   background: url('../../images/trashlogo.svg') no-repeat center;
-  width: 40px;
-  height: 40px;
-  margin: 24px 24px 0 0;
-  align-self: flex-end;
-  border-radius: 8px;
   background-color: #ffffff;
-  border: none;
-  cursor: pointer;
-  position: absolute;
 }
 
-.card__button_delete-black {
+.card__button_delete:hover {
   background: url('../../images/trashlogoblack.svg') no-repeat center;
   background-color: #ffffff;
 }
@@ -78,7 +73,7 @@
 
 .card__date {
   margin: 20px 0 0 24px;
-  font-family: 'SourceSansPro';
+  font-family: 'SourceSansPro', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -88,7 +83,7 @@
 
 .card__title {
   margin: 12px 0 0 24px;
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
@@ -100,7 +95,7 @@
 
 .card__text {
   margin: 16px 0 0 24px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -111,7 +106,7 @@
 
 .card__author {
   margin: 18px 0 0 24px;
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -121,47 +116,48 @@
   color: #b6bcbf;
 }
 
-.card__keyword {
-  background: #ffffff;
+.card__button_keyword {
   border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  width: 121px;
+  width: 124px;
   height: 40px;
   margin: 24px 0 0 24px;
+  align-self: flex-start;
 }
 
-.card__keyword_hide {
+.card__button_keyword_hide {
   display: none;
 }
 
-.card__remove {
-  width: 159px;
+.card__button_text {
+  display: none;
+}
+
+.card__button_text_hide {
+  display: none;
+}
+
+.card__button_delete:hover + .card__button_text {
+  margin: 24px 5px 0 149px;
+  width: 182px;
   height: 40px;
   background: #ffffff;
   box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
   border-radius: 10px;
-  margin: 24px 69px 0 0;
-  position: absolute;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  align-self: flex-end;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
+  text-align: center;
   color: #000000;
-}
-
-.card__remove_hide {
-  display: none;
+  border: none;
+  position: absolute;
+  display: block;
+  align-self: flex-start;
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1080px) {
   .card {
     width: 224px;
     height: 420px;
@@ -211,25 +207,100 @@
     width: 192px;
     height: 20px;
   }
-  .card__signin {
-    margin: 8px 0 0 8px;
+  .card__button_mark:hover + .card__button_signin {
+    margin: 8px 0 0 46px;
     width: 122px;
     height: 40px;
   }
-  .card__keyword {
-    width: 83px;
+  .card__button_keyword {
+    width: 120px;
     margin: 8px 0 0 8px;
   }
   .card__button_delete {
     margin: 8px 8px 0 0;
   }
-  .card__remove {
-    width: 83px;
-    margin: 64px 8px 0 0;
+
+  .card__button_mark:hover + .card__button_text {
+    margin: 8px 0 0 32px;
+    width: 140px;
+  }
+  .card__button_delete:hover + .card__button_text {
+    margin: 52px 0px 0 40px;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 680px) {
+  .card {
+    width: 224px;
+    height: 420px;
+  }
+  .card__button {
+    margin: 8px 8px 0 0;
+  }
+  .card__button_delete-black {
+    margin: 8px 8px 0 0;
+  }
+
+  .card__image {
+    width: 224px;
+    height: 150px;
+  }
+
+  .card__date {
+    margin: 16px 0 0 15px;
+  }
+  .card__title {
+    margin: 12px 16px 0;
+    font-size: 22px;
+    line-height: 24px;
+    width: 192px;
+    height: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .card__text {
+    margin: 10px 16px 0;
+    width: 192px;
+    height: 88px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .card__author {
+    margin: 12px 16px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 192px;
+    height: 20px;
+  }
+  .card__button_signin {
+    margin: 8px 0 0 8px;
+    width: 122px;
+    height: 40px;
+  }
+  .card__button_keyword {
+    margin: 8px 0 0 8px;
+  }
+  .card__button_delete {
+    margin: 8px 8px 0 0;
+  }
+  .card__button_mark:hover + .card__button_text {
+    margin: 16px 0 0 88px;
+    width: 140px;
+  }
+
+  .card__button_delete:hover + .card__button_text {
+    margin: 61px 0px 0 90px;
+  }
+}
+
+@media screen and (max-width: 473px) {
   .card {
     width: 288px;
     height: 440px;
@@ -272,14 +343,16 @@
     width: 256px;
   }
 
-  .card__signin {
-    margin: 16px 0 0 16px;
-    width: 122px;
-    height: 40px;
+  .card__button_mark:hover + .card__button_signin {
+    margin: 16px 0 0 100px;
   }
 
-  .card__remove {
+  .card__button_remove {
     width: 83px;
     margin: 8px 64px 0 0;
+  }
+
+  .card__button_keyword {
+    margin-left: 8px;
   }
 }

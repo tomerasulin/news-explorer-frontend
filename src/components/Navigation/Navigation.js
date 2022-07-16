@@ -98,7 +98,7 @@ const Navigation = ({
         </Link>
         <button
           className={
-            isLoggedIn ? 'nav__footer__item_hide' : 'nav__header__item'
+            isLoggedIn ? 'nav__header__item_hide' : 'nav__header__item'
           }
           onClick={onPopupClick}
           type='button'

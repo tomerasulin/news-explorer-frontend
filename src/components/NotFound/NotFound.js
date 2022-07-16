@@ -7,7 +7,7 @@ const NotFound = () => {
       <img
         className='page-not-found__image'
         src={notFoundImage}
-        alt='Not Found Image'
+        alt='Not Found'
       />
       <h3 className='page-not-found__title'>Nothing found</h3>
       <p className='page-not-found__text'>

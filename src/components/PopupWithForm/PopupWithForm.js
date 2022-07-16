@@ -93,11 +93,11 @@ const PopupWithForm = ({ isOpen, onClose }) => {
             {errors.password}
           </span>
 
-          <span className={isSignUp ? 'popup__span' : 'popup_hide'}>
+          <span className={isSignUp ? 'popup__span' : 'popup__span_hide'}>
             username
           </span>
           <input
-            className={isSignUp ? 'popup__input' : 'popup_hide'}
+            className={isSignUp ? 'popup__input' : 'popup__input_hide'}
             placeholder='Enter your username'
             type='text'
             required
@@ -111,7 +111,7 @@ const PopupWithForm = ({ isOpen, onClose }) => {
                 ? `popup__error ${
                     errors.username !== '' ? 'popup__error_visible' : ''
                   }`
-                : 'error_hide'
+                : 'popup__error_hide'
             }
           >
             {errors.username}

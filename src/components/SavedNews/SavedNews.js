@@ -1,10 +1,14 @@
 import './SavedNews.css';
 import NewsCardList from '../NewsCardList/NewsCardList';
 
-const SavedNews = () => {
+const SavedNews = ({ isLoggedIn }) => {
   return (
     <main className='news'>
-      <NewsCardList isSavedNews={true} />
+      <NewsCardList
+        isSavedNews={true}
+        isLoggedIn={isLoggedIn}
+        text='Remove from saved'
+      />
     </main>
   );
 };

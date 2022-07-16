@@ -23,7 +23,7 @@
 }
 
 .about__title {
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -33,7 +33,7 @@
 }
 
 .about__paragraph {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -44,7 +44,7 @@
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1080px) {
   .about {
     padding-bottom: 70px;
   }
@@ -67,14 +67,14 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   .about {
     padding-bottom: 61px;
   }
   .about__img {
     width: 232px;
     height: 232px;
-    margin: 61px 32px 0 40px;
+    margin: 30px 20px 0 20px;
   }
   .about__author {
     margin: 40px 0 0 0;
@@ -85,12 +85,12 @@
     margin: 0;
   }
   .about__paragraph {
-    max-width: 424px;
+    max-width: 375px;
     margin: 16px 0 0;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 680px) {
   .about {
     padding-bottom: 128px;
     flex-direction: column;
@@ -110,6 +110,6 @@
   }
   .about__paragraph {
     max-width: 288px;
-    margin: 16px 16px 0;
+    margin: 16px 0 0 8px;
   }
 }

@@ -16,7 +16,7 @@
 
 .header-saved-news__logo {
   margin: 30px 0 26px 104px;
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -28,7 +28,7 @@
 
 .header-saved-news__subtitle {
   margin: 0;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -38,7 +38,7 @@
 
 .header-saved-news__title {
   margin-top: 28px;
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -48,7 +48,7 @@
 
 .header-saved-news__keyword {
   margin: 30px 0 62px 0;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
