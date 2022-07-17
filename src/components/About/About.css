@@ -44,7 +44,7 @@
 }
 
 /* Media Queries */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1248px) {
   .about {
     padding-bottom: 70px;
   }
