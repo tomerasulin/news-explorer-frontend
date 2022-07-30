@@ -1,0 +1,127 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1440px;
+}
+
+.footer__text {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #b6bcbf;
+  margin: 32px 0 26px 104px;
+}
+
+.footer__link-group {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__link {
+  margin-top: 30px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #1a1b22;
+  text-decoration: none;
+}
+
+.footer__link:first-child {
+  width: 112px;
+}
+
+.footer__link:nth-child(2) {
+  width: 192px;
+}
+
+.footer__logo {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  margin: 30px 28px 30px 42px;
+}
+
+.footer__logo:last-of-type {
+  margin: 30px;
+}
+
+.footer__groups {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__logo-group {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .footer {
+    max-width: 768px;
+  }
+  .footer__text {
+    margin: 24px 0 18px 40px;
+  }
+  .footer__link {
+    margin-top: 21px;
+  }
+  .footer__link:first-child {
+    width: 88px;
+  }
+
+  .footer__link:nth-child(2) {
+    width: 176px;
+  }
+  .footer__logo {
+    width: 24px;
+    height: 24px;
+    margin: 22px 26.89px 22.39px 25.89px;
+  }
+  .footer__logo:last-of-type {
+    margin: 20px 41px 21px 26.89px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .footer {
+    max-width: 320px;
+    flex-direction: column-reverse;
+  }
+  .footer__text {
+    margin: 38px 16px 22px;
+  }
+  .footer__link {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .footer__link-group {
+    flex-direction: column;
+  }
+  .footer__logo {
+    width: 20px;
+    height: 20px;
+    margin: 20px 26px 0 16px;
+  }
+  .footer__logo:last-of-type {
+    margin: 20px 16px 0 0;
+  }
+
+  .footer__groups {
+    margin: 0 16px 0 14px;
+    justify-content: space-between;
+  }
+}
