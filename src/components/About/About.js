@@ -8,8 +8,9 @@ const About = () => {
       <div className='about__author'>
         <h2 className='about__title'>Tomer Asulin</h2>
         <p className='about__paragraph'>
-          Hey all, My name is Tomer and I'm a full-stack web developer. I'm familiar with
-          HTML, CSS, JS, React and Node.js
+          Hey all, My name is Tomer and I'm a full-stack web developer. I'm
+          familiar with HTML, CSS, JS, React and Node.js along with creating a
+          remote server, interact with databases such as Mongo and MySQL.
         </p>
         <p className='about__paragraph'>
           This block describes the project author. Here you should indicate your

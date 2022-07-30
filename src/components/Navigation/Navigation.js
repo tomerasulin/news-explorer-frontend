@@ -1,19 +1,24 @@
 import '../Navigation/Navigation.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import hamburgerMenu from '../../images/HamburgerIcon.svg';
 import closeButton from '../../images/CloseIcon.svg';
 import hamburgerMenuBlack from '../../images/HamburgerIconBlack.svg';
 import closeButtonBlack from '../../images/CloseIconBlack.svg';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import { useContext } from 'react';
 
 const Navigation = ({
   isLoggedIn,
   isSavedNews,
   onPopupClick,
-  username,
   isMobile,
   isOpen,
   onHandleMenu,
+  onLogout,
+  rerenderNews,
 }) => {
+  const currentUser = useContext(CurrentUserContext);
+
   return isMobile ? (
     <>
       <img
@@ -37,7 +42,7 @@ const Navigation = ({
           <nav
             className={isLoggedIn ? 'nav__header-saved-news' : 'nav__header'}
           >
-            <Link
+            <NavLink
               className={
                 isSavedNews
                   ? 'nav__header-saved-news__item'
@@ -46,7 +51,7 @@ const Navigation = ({
               to={'/'}
             >
               Home
-            </Link>
+            </NavLink>
             <button
               className={
                 isLoggedIn ? 'nav__footer__item_hide' : 'nav__header__item'
@@ -56,7 +61,7 @@ const Navigation = ({
             >
               Sign in
             </button>
-            <Link
+            <NavLink
               className={
                 isLoggedIn && isSavedNews
                   ? 'nav__header-saved-news__item'
@@ -64,11 +69,12 @@ const Navigation = ({
                   ? 'nav__header__item'
                   : 'nav__header__item_hide'
               }
-              to={'/saved-news'}
+              to='/saved-news'
+              onClick={rerenderNews}
             >
               Saved articles
-            </Link>
-            <p
+            </NavLink>
+            <NavLink
               className={
                 isLoggedIn && isSavedNews
                   ? 'nav__header-saved-news__item'
@@ -76,9 +82,11 @@ const Navigation = ({
                   ? 'nav__header__item'
                   : 'nav__header__item_hide'
               }
+              to={'/'}
+              onClick={onLogout}
             >
-              {username}
-            </p>
+              {currentUser.username}
+            </NavLink>
           </nav>
         </>
       )}
@@ -86,7 +94,7 @@ const Navigation = ({
   ) : (
     <>
       <nav className={isLoggedIn ? 'nav__header-saved-news' : 'nav__header'}>
-        <Link
+        <NavLink
           className={
             isSavedNews
               ? 'nav__header-saved-news__item'
@@ -95,7 +103,7 @@ const Navigation = ({
           to={'/'}
         >
           Home
-        </Link>
+        </NavLink>
         <button
           className={
             isLoggedIn ? 'nav__header__item_hide' : 'nav__header__item'
@@ -105,7 +113,7 @@ const Navigation = ({
         >
           Sign in
         </button>
-        <Link
+        <NavLink
           className={
             isLoggedIn && isSavedNews
               ? 'nav__header-saved-news__item nav__header-saved-news__item_focus'
@@ -113,11 +121,12 @@ const Navigation = ({
               ? 'nav__header__item'
               : 'nav__header__item_hide'
           }
-          to={'/saved-news'}
+          to='/saved-news'
+          onClick={rerenderNews}
         >
           Saved articles
-        </Link>
-        <p
+        </NavLink>
+        <NavLink
           className={
             isLoggedIn && isSavedNews
               ? 'nav__header-saved-news__item'
@@ -125,9 +134,11 @@ const Navigation = ({
               ? 'nav__header__item'
               : 'nav__header__item_hide'
           }
+          to={'/'}
+          onClick={onLogout}
         >
-          {username}
-        </p>
+          {currentUser.username}
+        </NavLink>
       </nav>
     </>
   );

@@ -1,7 +1,7 @@
 import './NotFound.css';
 import notFoundImage from '../../images/not-found_v1.svg';
 
-const NotFound = () => {
+const NotFound = ({ errorTitle, errorContent }) => {
   return (
     <section className='page-not-found'>
       <img
@@ -9,10 +9,8 @@ const NotFound = () => {
         src={notFoundImage}
         alt='Not Found'
       />
-      <h3 className='page-not-found__title'>Nothing found</h3>
-      <p className='page-not-found__text'>
-        Sorry, but nothing matched your search terms.
-      </p>
+      <h3 className='page-not-found__title'>{errorTitle}</h3>
+      <p className='page-not-found__text'>{errorContent}</p>
     </section>
   );
 };
