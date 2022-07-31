@@ -50,10 +50,13 @@ class MainApi {
   }
 }
 
+const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://news-explorer.students.nomoredomainssbs.ru'
+    : 'http://localhost:3001';
+
 const mainApi = new MainApi({
-  baseUrl: 'https://news-explorer.students.nomoredomainssbs.ru',
+  baseUrl: BASE_URL,
 });
 
 export default mainApi;
-
-

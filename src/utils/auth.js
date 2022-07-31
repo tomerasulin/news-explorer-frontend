@@ -1,4 +1,7 @@
-export const BASE_URL = 'https://news-explorer.students.nomoredomainssbs.ru';
+export const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://news-explorer.students.nomoredomainssbs.ru'
+    : 'http://localhost:3001';
 
 const checkResponse = (res) => {
   if (!res.ok) {

@@ -7,7 +7,11 @@ class NewsApi {
   // GET https://newsapi.org/v2/top-headlines?country=us&apiKey=[your_key]
   getNews(query) {
     return fetch(
-      `${this._baseUrl}/?q=${query}&from=${this._getCurrentDateOneWeekPrior()}&to=${this._getCurrentDate()}&pageSize=100&apiKey=${this._apiKey}`
+      `${
+        this._baseUrl
+      }/?q=${query}&from=${this._getCurrentDateOneWeekPrior()}&to=${this._getCurrentDate()}&pageSize=100&apiKey=${
+        this._apiKey
+      }`
     ).then((res) => this._getResponseData(res));
   }
 
@@ -37,8 +41,13 @@ class NewsApi {
   }
 }
 
+const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://nomoreparties.co/news/v2/everything'
+    : 'https://newsapi.org/v2/everything';
+
 const newsApi = new NewsApi({
-  baseUrl: 'https://nomoreparties.co/news/v2/everything',
+  baseUrl: BASE_URL,
   apiKey: '3554a25f7fed4111b9e3c55f0299e243',
 });
 
