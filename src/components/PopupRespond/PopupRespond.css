@@ -26,7 +26,7 @@
   transition: visibility 0s, opacity 0.8s;
 }
 
-.popup__container-confirmation {
+.popup__container-respond {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.popup__text-confirmation {
+.popup__text-respond {
   font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -67,7 +67,7 @@
   display: none;
 }
 
-.popup__subtext-confirmation {
+.popup__subtext-respond {
   padding: 0;
   color: #2f71e5;
   border: none;
@@ -82,7 +82,7 @@
   margin: 14px 166px 51px 36px;
 }
 
-.popup__form-confirmation {
+.popup__form-respond {
   border-radius: 10px;
   background: #ffffff;
   -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
@@ -98,31 +98,37 @@
   height: 182px;
 }
 
-@media screen and (max-width: 425px) {
-  .popup__container-confirmation {
+@media screen and (max-width: 485px) {
+  .popup__container-respond {
     max-width: 425px;
   }
-  .popup__form-confirmation {
+  .popup__form-respond {
     max-width: 425px;
   }
-  .popup__subtext-confirmation {
+  .popup__subtext-respond {
     margin-right: 74px;
   }
-  .popup__text-confirmation {
+  .popup__text-respond {
     margin-right: 74px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .popup__container-confirmation {
+  .popup__container-respond {
     max-width: 320px;
   }
-  .popup__form-confirmation {
+  .popup__form-respond {
     max-width: 320px;
   }
   .popup__close-button {
     width: 24px;
     height: 24px;
     margin-bottom: 16px;
+  }
+  .popup__text-respond {
+    margin: 40px 0 0 10px;
+  }
+  .popup__subtext-respond {
+    margin: 20px 0 0 10px;
   }
 }

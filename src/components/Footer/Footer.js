@@ -21,19 +21,26 @@ const Footer = () => {
               className='footer__link'
               href='https://practicum.com'
               target='_blank'
+              rel='noreferrer'
             >
               Practicum by Yandex
             </a>
           </li>
         </ul>
         <ul className='footer__logo-group'>
-          <a href='https://github.com' target='_blank' className='footer__logo'>
+          <a
+            href='https://github.com'
+            target='_blank'
+            className='footer__logo'
+            rel='noreferrer'
+          >
             <img src={githubLogo} alt='GitHub Logo' />
           </a>
           <a
             href='https://facebook.com'
             target='_blank'
             className='footer__logo'
+            rel='noreferrer'
           >
             <img src={facebookLogo} alt='Facebook Logo' />
           </a>
