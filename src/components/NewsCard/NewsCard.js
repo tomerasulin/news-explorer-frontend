@@ -17,9 +17,15 @@ const NewsCard = ({
     isSavedNews ? card.date : card.publishedAt.split('T')[0]
   );
   const [isSavedArticle, setIsSavedArticle] = useState(false);
-  const [isUpdating, setIsUpdating] = useState(true);
 
   useEffect(() => {
+    if (savedArticles) {
+      savedArticles.forEach((article) => {
+        if (article.title === card.title) {
+          setIsSavedArticle(true);
+        }
+      });
+    }
     if (!isSavedNews) {
       const newDate = new Date(card.publishedAt.split('T')[0]);
       const month = newDate.toLocaleString('default', { month: 'long' });
@@ -27,15 +33,7 @@ const NewsCard = ({
       const year = newDate.getFullYear();
       setDate(month + ' ' + day + ',' + year);
     }
-    if (savedArticles && isUpdating) {
-      savedArticles.forEach((article) => {
-        if (article.title === card.title) {
-          setIsSavedArticle(true);
-          setIsUpdating(false);
-        }
-      });
-    }
-  }, [date, isClicked]);
+  }, []);
 
   function handleClick(e) {
     e.preventDefault();

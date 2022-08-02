@@ -4,7 +4,6 @@ class NewsApi {
     this._apiKey = apiKey;
   }
 
-  // GET https://newsapi.org/v2/top-headlines?country=us&apiKey=[your_key]
   getNews(query) {
     return fetch(
       `${
@@ -41,10 +40,7 @@ class NewsApi {
   }
 }
 
-const BASE_URL =
-  process.env.NODE_ENV === 'production'
-    ? 'https://nomoreparties.co/news/v2/everything'
-    : 'https://newsapi.org/v2/everything';
+const BASE_URL = 'https://nomoreparties.co/news/v2/everything';
 
 const newsApi = new NewsApi({
   baseUrl: BASE_URL,

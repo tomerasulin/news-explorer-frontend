@@ -8,6 +8,7 @@ const SavedNewsHeader = ({
   onHandleMenu,
   isLoggedIn,
   onLogout,
+  rerenderNews,
 }) => {
   return (
     <header className='header-saved-news'>
@@ -21,6 +22,7 @@ const SavedNewsHeader = ({
         isOpen={isOpen}
         onHandleMenu={onHandleMenu}
         onLogout={onLogout}
+        rerenderNews={rerenderNews}
       />
     </header>
   );

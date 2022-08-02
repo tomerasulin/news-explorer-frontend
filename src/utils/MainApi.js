@@ -52,7 +52,7 @@ class MainApi {
 
 const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://news-explorer.students.nomoredomainssbs.ru'
+    ? 'https://api.news-explorer-api.students.nomoredomainssbs.ru'
     : 'http://localhost:3001';
 
 const mainApi = new MainApi({

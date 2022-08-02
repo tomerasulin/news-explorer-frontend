@@ -49,6 +49,7 @@ const Navigation = ({
                   : 'nav__header__item'
               }
               to={'/'}
+              onClick={rerenderNews}
             >
               Home
             </NavLink>
@@ -101,6 +102,7 @@ const Navigation = ({
               : 'nav__header__item nav__header__item_focus'
           }
           to={'/'}
+          onClick={rerenderNews}
         >
           Home
         </NavLink>

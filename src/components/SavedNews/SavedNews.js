@@ -19,9 +19,13 @@ const SavedNews = ({ isLoggedIn, savedArticles, rerenderNews }) => {
             : 1
         );
       });
-      const sortedMapKeywords = new Map([...mapKeywords.entries()].sort((a,b) => b[1] - a[1]));
+      const sortedMapKeywords = new Map(
+        [...mapKeywords.entries()].sort((a, b) => b[1] - a[1])
+      );
       if (sortedMapKeywords.size > 3) {
         setIsLargerKeywords(true);
+      } else {
+        setIsLargerKeywords(false);
       }
       setKeywords(Array.from(sortedMapKeywords.keys()));
     }

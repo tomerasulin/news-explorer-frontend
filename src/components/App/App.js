@@ -79,6 +79,9 @@ function App() {
         if (e === '409') {
           setServerError('User already exists');
           setSign('Sign in');
+        } else if (e === '500') {
+          setServerError('Internal server error! Try again later.');
+          setSign('Sign in');
         }
 
         setIsFailurePopupOpen(true);
@@ -205,13 +208,14 @@ function App() {
           <Route
             path='saved-news'
             element={
-              <ProtectedRoute loggedIn={isLoggedIn} >
+              <ProtectedRoute loggedIn={isLoggedIn}>
                 <SavedNewsHeader
                   isOpen={isOpen}
                   isMobile={isMobile}
                   onHandleMenu={() => setIsOpen(!isOpen)}
                   isLoggedIn={isLoggedIn}
                   onLogout={handleLogout}
+                  rerenderNews={handleRerenderNews}
                 />
                 <SavedNews
                   isLoggedIn={isLoggedIn}

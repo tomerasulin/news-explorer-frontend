@@ -30,7 +30,7 @@
 }
 
 .card__button_mark:hover + .card__button_text {
-  margin: 24px 5px 0 149px;
+  margin: 24px 5px 0 135px;
   width: 182px;
   height: 40px;
   background: #ffffff;
@@ -146,8 +146,8 @@
 }
 
 .card__button_delete:hover + .card__button_text {
-  margin: 24px 5px 0 149px;
-  width: 182px;
+  margin: 25px 5px 0 158px;
+  width: 173px;
   height: 40px;
   background: #ffffff;
   box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
@@ -173,6 +173,9 @@
   .card__image {
     width: 384px;
   }
+  .card__button_delete:hover + .card__button_text {
+    width: 158px;
+  }
 }
 
 @media screen and (max-width: 1184px) {
@@ -194,6 +197,12 @@
   .card__date {
     margin: 20px 0 0 10px;
   }
+  .card__button_delete:hover + .card__button_text {
+    width: 135px;
+  }
+  .card__button_mark:hover + .card__button_text {
+    margin:24px 5px 0 110px;
+  }
 }
 
 @media screen and (max-width: 1118px) {
@@ -202,6 +211,12 @@
   }
   .card__image {
     width: 340px;
+  }
+  .card__button_delete:hover + .card__button_text {
+    width: 115px;
+  }
+  .card__button_mark:hover + .card__button_text {
+    margin:24px 5px 0 90px;
   }
 }
 
@@ -212,11 +227,17 @@
   .card__image {
     width: 318px;
   }
+  .card__button_delete:hover + .card__button_text {
+    width: 90px;
+  }
+  .card__button_mark:hover + .card__button_text {
+    margin:24px 5px 0 70px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .card {
-    width: 224px;
+    width: 208px;
     height: 420px;
   }
   .card__button {
@@ -227,7 +248,7 @@
   }
 
   .card__image {
-    width: 224px;
+    width: 208px;
     height: 150px;
   }
 
@@ -278,17 +299,18 @@
   }
 
   .card__button_mark:hover + .card__button_text {
-    margin: 8px 0 0 32px;
+    margin: 8px 0 0 16px;
     width: 140px;
   }
   .card__button_delete:hover + .card__button_text {
-    margin: 52px 0px 0 40px;
+    margin: 52px 0px 0 85px;
+    width: 115px;
   }
 }
 
 @media screen and (max-width: 680px) {
   .card {
-    width: 224px;
+    width: 208px;
     height: 420px;
   }
   .card__button {
@@ -299,7 +321,7 @@
   }
 
   .card__image {
-    width: 224px;
+    width: 208px;
     height: 150px;
   }
 
@@ -348,12 +370,12 @@
     margin: 8px 8px 0 0;
   }
   .card__button_mark:hover + .card__button_text {
-    margin: 16px 0 0 88px;
+    margin: 8px 0 0 15px;
     width: 140px;
   }
 
   .card__button_delete:hover + .card__button_text {
-    margin: 61px 0px 0 35px;
+    margin: 61px 0px 0 88px;
   }
 }
 
@@ -414,9 +436,14 @@
   }
 
   .card__button_delete:hover + .card__button_text {
-    margin: 61px 0px 0 90px;
+    margin: 61px 0px 0 158px;
   }
   .card:first-child {
     margin-top: 58px;
+  }
+
+  .card__button_mark:hover + .card__button_text {
+    margin: 16px 0 0 87px;
+    width: 140px;
   }
 }

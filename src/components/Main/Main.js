@@ -22,16 +22,18 @@ const Main = ({
       {isNewsNotFound && (
         <NotFound errorTitle={error.title} errorContent={error.content} />
       )}
-      <NewsCardList
-        articles={articles}
-        isSavedNews={false}
-        isLoggedIn={isLoggedIn}
-        text='Sign in to save articles'
-        keyword={keyword}
-        savedArticles={savedArticles}
-        onPopupClick={onPopupClick}
-        rerenderNews={rerenderNews}
-      />
+      {!isNewsNotFound && (
+        <NewsCardList
+          articles={articles}
+          isSavedNews={false}
+          isLoggedIn={isLoggedIn}
+          text='Sign in to save articles'
+          keyword={keyword}
+          savedArticles={savedArticles}
+          onPopupClick={onPopupClick}
+          rerenderNews={rerenderNews}
+        />
+      )}
       <About />
     </main>
   );
