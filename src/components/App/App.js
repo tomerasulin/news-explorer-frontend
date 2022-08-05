@@ -54,6 +54,7 @@ function App() {
       setArticles(news);
       setKeyword(keyword);
       setIsNewsNotFound(false);
+      localStorage.setItem('saved', savedArticles);
     } else {
       setIsNewsNotFound(true);
     }

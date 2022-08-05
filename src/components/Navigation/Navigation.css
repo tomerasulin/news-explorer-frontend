@@ -59,9 +59,13 @@
   box-sizing: border-box;
   border: 1px solid #ffffff;
   border-radius: 100px;
-  width: 112px;
+  width: 130px;
   height: 48px;
-  background: url(../../images/logoutIcon.svg) no-repeat 80px;
+  background: url(../../images/logoutIcon.svg) no-repeat 105px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .nav__header-saved-news__item:nth-child(4) {
@@ -70,10 +74,13 @@
   box-sizing: border-box;
   border: 1px solid #1a1b22;
   border-radius: 100px;
-  width: 112px;
+  width: 130px;
   height: 48px;
-  background: url(../../images/logoutIconblack.svg) no-repeat 80px center;
-  text-align: left;
+  background: url(../../images/logoutIconblack.svg) no-repeat 105px center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .nav__header-saved-news__item {

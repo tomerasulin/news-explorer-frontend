@@ -8,15 +8,14 @@ const About = () => {
       <div className='about__author'>
         <h2 className='about__title'>Tomer Asulin</h2>
         <p className='about__paragraph'>
-          Hey all, My name is Tomer and I'm a full-stack web developer. I'm
-          familiar with HTML, CSS, JS, React and Node.js along with creating a
-          remote server, interact with databases such as Mongo and MySQL.
+          Hey all, My name is Tomer and I'm a full-stack web developer.
+          Knowledge of HTML, CSS, JS, React and Node.js. Creation of remote
+          server, interactation with databases such as MongoDB and MySQL.
         </p>
         <p className='about__paragraph'>
-          This block describes the project author. Here you should indicate your
-          name, what you do, and which development technologies you know. You
-          can also talk about your experience with Practicum, what you learned
-          there, and how you can help potential customers.
+          Alumni of Web development course in Practicum by Yandex. The course
+          provided me techniques and tools that improved my coding skills and
+          understanding.
         </p>
       </div>
     </section>

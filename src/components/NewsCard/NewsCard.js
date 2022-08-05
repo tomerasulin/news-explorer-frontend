@@ -18,14 +18,22 @@ const NewsCard = ({
   );
   const [isSavedArticle, setIsSavedArticle] = useState(false);
 
+  const isMarked = savedArticles
+    ? savedArticles.find((article) => article.title === card.title)
+    : null;
+
+  const articleMarkButtonClassName = `card__button ${
+    isMarked ? 'card__button_mark-fill' : 'card__button_mark'
+  }`;
+
   useEffect(() => {
-    if (savedArticles) {
-      savedArticles.forEach((article) => {
-        if (article.title === card.title) {
-          setIsSavedArticle(true);
-        }
-      });
-    }
+    // if (savedArticles) {
+    //   savedArticles.forEach((article) => {
+    //     if (article.title === card.title) {
+    //       setIsSavedArticle(true);
+    //     }
+    //   });
+    // }
     if (!isSavedNews) {
       const newDate = new Date(card.publishedAt.split('T')[0]);
       const month = newDate.toLocaleString('default', { month: 'long' });
@@ -38,7 +46,7 @@ const NewsCard = ({
   function handleClick(e) {
     e.preventDefault();
     if (isLoggedIn) {
-      if (!isSavedNews && !isSavedArticle) {
+      if (!isSavedNews && !isMarked) {
         mainApi
           .saveArticle({
             keyword,
@@ -54,18 +62,14 @@ const NewsCard = ({
             rerenderNews();
           })
           .catch(console.log);
-      } else if (isSavedArticle) {
-        savedArticles.forEach((article) => {
-          if (article.title === card.title) {
-            mainApi
-              .deleteArticle(article._id)
-              .then(() => {
-                setIsSavedArticle(false);
-                rerenderNews();
-              })
-              .catch(console.log);
-          }
-        });
+      } else if (isMarked) {
+        mainApi
+          .deleteArticle(isMarked._id)
+          .then(() => {
+            setIsSavedArticle(false);
+            rerenderNews();
+          })
+          .catch(console.log);
       } else {
         mainApi
           .deleteArticle(card._id)
@@ -95,11 +99,7 @@ const NewsCard = ({
         className={
           isSavedNews
             ? 'card__button card__button_delete '
-            : isLoggedIn && isClicked && isSavedArticle
-            ? 'card__button card__button_mark-fill'
-            : isSavedArticle
-            ? 'card__button card__button_mark-fill'
-            : 'card__button card__button_mark'
+            : articleMarkButtonClassName
         }
         onClick={handleClick}
       />
