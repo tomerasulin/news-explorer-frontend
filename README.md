@@ -1,7 +1,7 @@
 # news-explorer-api frontend
 
 A service where users can search for news articles and save them to their profiles.
-[The website](https://news-explorer-api.students.nomoredomainssbs.ru)
+[The website](https://newsexplorerta.com)
 
 NewsAPi - powered by [NewsAPI](https://newsapi.org/)
 
