@@ -23,13 +23,25 @@ class NewsApi {
 
   _getCurrentDateOneWeekPrior() {
     let today = new Date();
-    return (
-      today.getFullYear() +
-      '-' +
-      (today.getMonth() + 1) +
-      '-' +
-      new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).getDate()
-    );
+    if (
+      new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).getDate() >
+      new Date().getDate()
+    ) {
+      return (
+        today.getFullYear() +
+        '-' +
+        today.getMonth() +
+        '-' +
+        new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).getDate()
+      );
+    } else
+      return (
+        today.getFullYear() +
+        '-' +
+        (today.getMonth() + 1) +
+        '-' +
+        new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).getDate()
+      );
   }
 
   _getResponseData(res) {

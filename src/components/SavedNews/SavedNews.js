@@ -12,7 +12,7 @@ const SavedNews = ({ isLoggedIn, savedArticles, rerenderNews }) => {
     if (savedArticles) {
       const mapKeywords = new Map();
       savedArticles.map((article) => {
-        mapKeywords.set(
+        return mapKeywords.set(
           article.keyword,
           mapKeywords.get(article.keyword)
             ? mapKeywords.get(article.keyword) + 1
