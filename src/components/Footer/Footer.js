@@ -1,6 +1,6 @@
 import './Footer.css';
 import githubLogo from '../../images/Github.svg';
-import facebookLogo from '../../images/Facebook.svg';
+import LinkedinLogo from '../../images/LinkedIn.svg';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -12,24 +12,24 @@ const Footer = () => {
       <nav className='footer__groups'>
         <ul className='footer__link-group'>
           <li className='footer__link'>
-            <Link className='footer__link' to={'/'}>
+            <Link className='footer__link' to={'/'} reloadDocument>
               Home
             </Link>
           </li>
           <li className='footer__link'>
             <a
               className='footer__link'
-              href='https://practicum.com'
+              href='https://tomerasulin.github.io/tomer-website'
               target='_blank'
               rel='noreferrer'
             >
-              Practicum by Yandex
+              Tomer's Website
             </a>
           </li>
         </ul>
         <ul className='footer__logo-group'>
           <a
-            href='https://github.com'
+            href='https://github.com/tomerasulin'
             target='_blank'
             className='footer__logo'
             rel='noreferrer'
@@ -37,12 +37,12 @@ const Footer = () => {
             <img src={githubLogo} alt='GitHub Logo' />
           </a>
           <a
-            href='https://facebook.com'
+            href='https://www.linkedin.com/in/tomerasulin/'
             target='_blank'
             className='footer__logo'
             rel='noreferrer'
           >
-            <img src={facebookLogo} alt='Facebook Logo' />
+            <img className='footer__logo_img' src={LinkedinLogo} alt='LinkedIn Logo' />
           </a>
         </ul>
       </nav>
