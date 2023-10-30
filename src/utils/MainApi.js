@@ -52,7 +52,7 @@ class MainApi {
 
 const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://api.newsexplorerta.com'
+    ? 'ec2-16-171-234-171.eu-north-1.compute.amazonaws.com/api'
     : 'http://localhost:3001';
 
 const mainApi = new MainApi({
