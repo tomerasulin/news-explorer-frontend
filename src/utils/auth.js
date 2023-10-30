@@ -1,6 +1,6 @@
 export const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'ec2-16-171-234-171.eu-north-1.compute.amazonaws.com/api'
+    ? '/api'
     : 'http://localhost:3001';
 
 const checkResponse = (res) => {
