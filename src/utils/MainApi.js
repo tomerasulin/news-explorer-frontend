@@ -52,7 +52,7 @@ class MainApi {
 
 const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? '/api'
+    ? 'https://api.newsexplorerta.com/api'
     : 'http://localhost:3001';
 
 const mainApi = new MainApi({
